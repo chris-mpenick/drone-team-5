@@ -23,7 +23,7 @@ The objective of this project is to test different drone arm designs and materia
 * For best results, use MATLAB 2026a
 
 ### Reproducibility
-To reproduce the results of the current configuration of drone-team-5.mlx, following the following steps:
+To reproduce the results of the current configuration of drone-team-5.mlx, follow the following steps:
 1. Set the current directory to the project root folder 
 2. Specify the file path in line 70 to be "resource/stl"
 3. Run the live script to load file names of the drone arm designs in "resource/stl" to memory
@@ -65,7 +65,7 @@ We propose to make a MATLAB live script that can automatically analyze multiple 
 1. Gather starter assumptions and define material properties into MATLAB
 2. Develop at least two distinct drone arm designs by drawing clear, neatly labeled sketches that show key geometric features
 3. Perform a thrust-to-weight analysis across all design and material options to evaluate which drone arm design and which material optimizes payload capacity while meeting suggested safety requirements
-4. Perform finite element analysis (FEA) across all design and material options to evaluate the structural safety factor of your drone arm design. (To simplify the task, we will perform the FEA only on a single drone arm.)
+4. Perform finite element analysis (FEA) across all design and material options to evaluate the structural safety factor of your drone arm design. (To simplify the task, we will perform the FEA only on a single drone arm at a time.)
 5. Using the results of both the thrust-to-weight analysis and finite element analysis, propose a final design solution for the drone arm that maximizes payload capacity while meeting safe flight standards and maintaining structural integrity under load
 
 ### Challenges
@@ -78,7 +78,7 @@ We propose to make a MATLAB live script that can automatically analyze multiple 
 ## Designs
 ### Chris’s Design: chris_final_drone_arm
 ![Chris's Drone Arm Design](resource/documents/chris_finalized_drawing.jpeg)
-I chose a design that was a solid beam with a cutout slot in the middle to reduce the weight and increase the airflow through the arm. I chose to do a solid design to minimize complexity while also ensuring that it would be strong enough to support the payload and the thrust from the motor. I designed the length of the drone arm to be 280 mm in order to be long enough to support propellers of 127 mm (5 inches), which would be long enough to lift the body of the drone and payload. When loaded the beam will perform well and not undergo much displacement with most of the materials. PLA will have the most displacement due to the softness of the plastic.
+I chose a design that was a solid beam with a cutout slot in the middle to reduce the weight and increase the airflow through the arm. I chose to do a solid design to minimize complexity while also ensuring that it would be strong enough to support the weight of the payload and the thrust from the motor. I designed the length of the drone arm to be 280 mm in order to be long enough to support propellers of 127 mm (5 inches), which would be long enough to lift the body of the drone and payload. I integrated filleted edges on the inside cutout to reduce drag and stress concentrations within the material. I optimized the thickness of the drone arm in order to maximize payload capacity, while still maintaining sufficient safety factors of 1.5 and above. When loaded the beam will perform well and not undergo much displacement with most of the materials. PLA will have the most displacement due to the softness of the plastic. Birch wood was the most optimal material for my design because of the high payload capacity, sufficient safety factor, and very low cost.
 
 ### Will’s Design: McMurray_DroneArmPrototypeV5
 ![Will's Drone Arm Design](resource/documents/McMurrayDroneArmPrototypeV5Drawing.jpg)
@@ -124,7 +124,7 @@ This drone arm design is a narrow and solid beam with dimensions similar to what
 ### Final Recommended Design Solution
 Based on our data, we recommend the usage of `chris_final_drone_arm` made with birch wood to be used as a drone arm. The design exceeds the minimum 0.5kg payload capacity with a payload capacity of 0.92kg; exceeds the recommended safety factor range of 1.5-2 by having a safety factor of 2.2; and has the lowest material cost of $0.06 out of our material options, with the average material cost of $0.32 and the most expensive material option being $0.95 for a carbon fiber polymer composite. However, the arm has a maximum displacement of 22mm, considerably higher than aluminum alloy and carbon fiber polymer composite’s maximum displacement of 3mm. Despite the high displacement, the birch wood drone arm still exceeds the recommended safety factor range, allowing us to still consider the usage of that material for a drone arm.
 
-In contrast, `DroneArm_Dogbone` made with carbon fiber reinforced polymer was our second-best option: It has a 0.97kg payload capacity, a safety factor of 1.7, costs $0.49 in material, and has a maximum displacement of 47mm. Despite the slightly higher payload capacity, the dogbone design comes with too many drawbacks compared to `chris_drone_arm_v3`. The safety factor, maximum displacement, and material cost was considerably worse than `chris_final_drone_arm` made of birch wood, despite the use of a premium engineering material, so we ruled out `DroneArm_Dogbone`.
+In contrast, `DroneArm_Dogbone` made with carbon fiber reinforced polymer was our second-best option: It has a 0.97kg payload capacity, a safety factor of 1.7, costs $0.49 in material, and has a maximum displacement of 47mm. Despite the slightly higher payload capacity, the dogbone design comes with too many drawbacks compared to `chris_final_drone_arm`. The safety factor, maximum displacement, and material cost was considerably worse than `chris_final_drone_arm` made of birch wood, despite the use of a premium engineering material, so we ruled out `DroneArm_Dogbone`.
 
 Thus, `chris_final_drone_arm` made of birch wood is the most feasible drone arm design that we’ve analyzed. The design’s high cost efficiency makes it very suitable to mass produce for low-cost drone units.
 
