@@ -77,7 +77,7 @@ We propose to make a MATLAB live script that can automatically analyze multiple 
 
 ## Designs
 ### Chris’s Design: chris_final_drone_arm
-![Chris's Drone Arm Design](resource/documents/chris_penick_drone_arm_drawing.jpg)
+![Chris's Drone Arm Design](resource/documents/chris_finalized_drawing.jpeg)
 I chose a design that was a solid beam with a cutout slot in the middle to reduce the weight and increase the airflow through the arm. I chose to do a solid design to minimize complexity while also ensuring that it would be strong enough to support the payload and the thrust from the motor. I designed the length of the drone arm to be 280 mm in order to be long enough to support propellers of 127 mm (5 inches), which would be long enough to lift the body of the drone and payload. When loaded the beam will perform well and not undergo much displacement with most of the materials. PLA will have the most displacement due to the softness of the plastic.
 
 ### Will’s Design: McMurray_DroneArmPrototypeV5
