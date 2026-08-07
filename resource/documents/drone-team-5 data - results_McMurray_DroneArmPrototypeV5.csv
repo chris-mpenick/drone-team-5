@@ -1,0 +1,7 @@
+Material,maxDisplacement_m,maxVonMisesStress_Pa,safetyFactor,payloadCapacity_kg,Design_Cost_USD
+Carbon Fiber Composite (CFRP),2.09E-04,5.38E+06,111.48,0.420,1.35
+Aluminum Alloy,2.12E-04,5.38E+06,51.10,0.022,0.34
+Fiberglass Composite (GFRP),5.84E-04,5.38E+06,55.73,0.312,0.67
+PLA Plastic,4.17E-03,5.38E+06,11.14,0.547,0.16
+ABS Plastic,7.30E-03,5.38E+06,7.43,0.620,0.16
+Wood (Birch),1.46E-03,5.38E+06,14.86,0.783,0.09
