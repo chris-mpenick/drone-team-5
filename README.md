@@ -78,6 +78,37 @@ My design is a long drone arm that bends down into the leg with a fillet on the 
 
 This drone arm design is a narrow and solid beam with dimensions similar to what’s expected for a fast-flying FPV drone. I chose this design because the cut and slimming taper in the middle will save weight and material, while the motor and drone body mount points’ has extra material to increase the amount of threading available and act as additional reinforcement to improve long-term durability (The dogbone name comes from the middle taper in the drone arm’s side profile). Sharp corners were eliminated through filet operations to decrease stress concentrations, giving it a round design. Even so, this arm design will suffer from bending and torsional stresses under a motor’s load because of the lack of material and bracing in the arm’s tapered portion. Therefore, this design warrants the usage of a very stiff material like a carbon-fiber reinforced polymer composite to minimize the bending and torsional stresses and maximize its effectiveness.
 
+## Table of Results
+### DroneArm_Dogbone
+| Material                      |   maxDisplacement_m |   maxVonMisesStress_Pa |   safetyFactor |   payloadCapacity_kg |   Design_Cost_USD |
+|:------------------------------|--------------------:|-----------------------:|---------------:|---------------------:|------------------:|
+| Carbon Fiber Composite (CFRP) |              0.0468 |               3.49e+08 |           1.72 |                0.973 |              0.49 |
+| Aluminum Alloy                |              0.0475 |               3.49e+08 |           0.79 |                0.954 |              0.12 |
+| Fiberglass Composite (GFRP)   |              0.131  |               3.49e+08 |           0.86 |                0.967 |              0.24 |
+| PLA Plastic                   |              0.936  |               3.48e+08 |           0.17 |                0.979 |              0.06 |
+| ABS Plastic                   |              1.640   |               3.48e+08 |           0.11 |                0.982 |              0.06 |
+| Wood (Birch)                  |              0.328  |               3.48e+08 |           0.23 |                0.990  |              0.03 |
+
+### McMurray_DroneArmPrototypeV5
+| Material                      |   maxDisplacement_m |   maxVonMisesStress_Pa |   safetyFactor |   payloadCapacity_kg |   Design_Cost_USD |
+|:------------------------------|--------------------:|-----------------------:|---------------:|---------------------:|------------------:|
+| Carbon Fiber Composite (CFRP) |            0.000209 |               5.38e+06 |         111.48 |                0.420  |              1.35 |
+| Aluminum Alloy                |            0.000212 |               5.38e+06 |          51.10  |                0.022 |              0.34 |
+| Fiberglass Composite (GFRP)   |            0.000584 |               5.38e+06 |          55.73 |                0.312 |              0.67 |
+| PLA Plastic                   |            0.00417  |               5.38e+06 |          11.14 |                0.547 |              0.16 |
+| ABS Plastic                   |            0.00730   |               5.38e+06 |           7.43 |                0.620  |              0.16 |
+| Wood (Birch)                  |            0.00146  |               5.38e+06 |          14.86 |                0.783 |              0.09 |
+
+### chris_final_drone_arm
+| Material                      |   maxDisplacement_m |   maxVonMisesStress_Pa |   safetyFactor |   payloadCapacity_kg |   Design_Cost_USD |
+|:------------------------------|--------------------:|-----------------------:|---------------:|---------------------:|------------------:|
+| Carbon Fiber Composite (CFRP) |             0.00317 |               3.66e+07 |          16.42 |                0.796 |              0.95 |
+| Aluminum Alloy                |             0.00322 |               3.65e+07 |           7.53 |                0.656 |              0.24 |
+| Fiberglass Composite (GFRP)   |             0.0089  |               3.66e+07 |           8.20  |                0.758 |              0.48 |
+| PLA Plastic                   |             0.0633  |               3.65e+07 |           1.64 |                0.841 |              0.11 |
+| ABS Plastic                   |             0.111   |               3.65e+07 |           1.10  |                0.866 |              0.11 |
+| Wood (Birch)                  |             0.0222  |               3.65e+07 |           2.19 |                0.924 |              0.06 |
+
 ## Interpretation of Results
 ### Final Recommended Design Solution
 Based on our data, we recommend the usage of `chris_final_drone_arm` made with birch wood to be used as a drone arm. The design exceeds the minimum 0.5kg payload capacity with a payload capacity of 0.92kg; exceeds the recommended safety factor range of 1.5-2 by having a safety factor of 2.2; and has the lowest material cost of $0.06 out of our material options, with the average material cost of $0.32 and the most expensive material option being $0.95 for a carbon fiber polymer composite. However, the arm has a maximum displacement of 22mm, considerably higher than aluminum alloy and carbon fiber polymer composite’s maximum displacement of 3mm. Despite the high displacement, the birch wood drone arm still exceeds the recommended safety factor range, allowing us to still consider the usage of that material for a drone arm.
