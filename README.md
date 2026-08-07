@@ -22,6 +22,17 @@ The objective of this project is to test different drone arm designs and materia
 * The Partial Differential Equation Toolbox is required
 * For best results, use MATLAB 2026a
 
+### Reproducibility
+To reproduce the results of the current configuration of drone-team-5.mlx, following the following steps:
+1. Set the current directory to the project root folder 
+2. Specify the file path in line 70 to be "resource/stl"
+3. Run the live script to load file names of the drone arm designs in "resource/stl" to memory
+4. Specify "chris_final_drone_arm.stl" for fileNameFEA (line 125)
+5. Specify 7 and 8 to the be face IDs of staticFace (line 143) and loadFace (line 147) respectively
+6. Specify "Wood (Birch)" for materialVisual (line 231) for the PDE visualizer task
+7. Turn off deformation in the PDE visualizer task
+8. Run the live script or run the FEA section to recompute the FEA
+
 ### Troubleshooting
 * If the “Visualize PDE Results” task at the end of the live script doesn’t display correctly after running the entire live script, verify that the Partial Differential Equation Toolbox is installed and restart MATLAB.
 * If the live script throws an error, `Index exceeds array bounds.`, verify that the current directory is set to the project root folder by typing `cd` into the command window. The current directory must be set to the project root folder for the live script to read the `.stl` files located in `resource/stl`.
